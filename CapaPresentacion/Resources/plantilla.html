@@ -1,0 +1,187 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: Arial, sans-serif;
+        table-layout: fixed; /* Evita que la tabla crezca fuera del margen */
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        word-wrap: break-word; /* Evita desbordamientos de texto */
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .header-table td {
+        border: none;
+    }
+
+    .summary-box {
+        background-color: #d8d8d8;
+        font-weight: bold;
+    }
+
+    .total-row td {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #e6e6e6;
+    }
+
+    .spacing {
+        height: 20px;
+        border: none;
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .header {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .align-left {
+        text-align: left;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<table>
+    <tbody>
+        <tr>
+            <td class="no-border" style="width: 25%;"></td>
+            <td class="no-border" style="width: 50%;" align="center">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td align="center" class="header">
+                                <h4 style="margin: 0px;">ROBERTO BARENGO</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">RESUMEN DE GASTOS INQUILINO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: 25%;">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td align="center">@Nombre</td>
+                        </tr>
+                        <tr class="summary-box">
+                            <td align="center">REPORTE</td>
+                        </tr>
+                        <tr>
+                            <td align="center">@DNI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="spacing">
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="bold align-left">Inquilino:</td>
+                            <td style="border-bottom: 2px solid black;">@Nombre</td>
+                        </tr>
+                        <tr>
+                            <td class="bold align-left">Fecha emisión de resumen:</td>
+                            <td style="border-bottom: 2px solid black;">@Fecha</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="spacing">
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <h3>Servicios</h3>
+                <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>@tablaServicios</th>
+                        </tr>
+                    </thead>
+                </table>
+
+            </td>
+
+        </tr>
+
+        <tr class="spacing">
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <h3>Arreglos</h3>
+                <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>@tablaArreglos</th>
+                        </tr>
+                    </thead>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="spacing">
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <h3>Expensas || Comision || Alquiler</h3>
+                <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Expensas</th>
+                            <th>Comisión</th>
+                            <th>Alquiler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@gastoExpensas</td>
+                            <td>@gastoComision</td>
+                            <td>@gastoAlquiler</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+
+        <tr class="total-row">
+            <td colspan="2" class="no-border"></td>
+            <td style="text-align: right; font-weight: bold;">Total: @TOTAL</td>
+        </tr>
+
+        <tr class="total-row">
+            <td colspan="2" class="no-border">Detalles</td>
+            <td align="left">@Detalles</td>
+        </tr>
+    </tbody>
+</table>
